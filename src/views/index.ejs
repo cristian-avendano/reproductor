@@ -1,0 +1,119 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor</title>
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="stylesheet" href="../public/css/lateral.css">
+    <link rel="stylesheet" href="../public/css/contenido.css">
+    <link rel="stylesheet" href="../public/css/tema.css">
+    <link rel="stylesheet" href="../public/css/alerta.css">
+    <link rel="stylesheet" href="../public/css/play-cont.css">
+</head>
+<div class="general">
+    <div class="lateral tema-1">
+        <div id="set-op" class="opcion centro">
+            <img src="../public/iconos/settings-8.png" alt="" class="icono">
+        </div> 
+        <div id="lib-op" class="opcion centro">
+            <img src="../public/iconos/music-player-1.png" alt="" class="icono">
+        </div>
+        <div id="play-op" class="opcion centro">
+            <img src="../public/iconos/play-button-1.png" alt="" class="icono">
+        </div> 
+    </div>
+    <div class="contenido">
+        <div id="set-cont" class="cont tema-1 inv">
+            <div class="fila tema-1 container justi">
+                <h3>Agregar Directorio</h3>
+                <input type="submit" value="Agregar" id="add" class="btn btn-outline-primary boton">
+            </div>
+            <div class="fila tema-1 container justi">
+                <h4>Directorio:</h4>
+                <h5 id="t-dir"></h5>
+            </div>
+            <div class="fila tema-1 container justi">
+                <h3>Vaciar Datos</h3>
+                <input type="submit" value="Vaciar" id="va" class="btn btn-outline-danger boton">
+            </div>
+            <div class="fila tema-1 container justi">
+                <h3>Reiniciar Aplicativo</h3>
+                <input type="submit" value="Reiniciar" id="re" class="btn btn-outline-warning boton">
+            </div>
+        </div>
+        <div id="lib-cont" class="cont tema-1 scroll-y inv">
+            <table class="table table-borderless table-striped tema-1">
+                <thead class="tema-3">
+                  <tr>
+                    <th class="th-id">#</th>
+                    <th class="th-titulo">Título</th>
+                    <th class="th-duracion">Tipo</th>
+                    <th class="th-rep">°</th>
+                  </tr>
+                </thead>
+                <tbody id="table-lib">
+                  <!--tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td class="repro"></td>
+                  </tr-->
+                </tbody>
+              </table>
+        </div>
+        <div id="play-cont" class="cont tema-1">
+            <div class="cover">
+                <div class="cont-text-cover centro">
+                    <h3 id="titulo-cover">Texto</h3>
+                </div>
+                <div class="cont-im-cover centro">
+                    <img src="" alt="" id="imagen">    
+                </div>
+            </div>
+            <div class="slide-music">
+                <div class="caja"><input type="range" min="0" max="200" value="0" class="custom-range"></div>
+            </div>
+            <div class="acciones wraped tema-3">
+                <div class="left centro">
+                    <div class="caja"><div id="stop"></div></div>
+                </div>
+                <div class="center wraped">                
+                    <div class="caja-l centro"><div  id="izq"></div></div>
+                    <div class="caja-c centro"><div  id="play"></div></div>
+                    <div class="caja-l centro"><div  id="der"></div></div>            
+                </div>
+                <div class="right centro">
+                    <div class="caja"><input type="range" min="0" max="10" value="5" id="vol" class="custom-range"></div>
+                </div>
+        </div>
+    </div>
+</div>
+<div id="cont-mensaje-1" class="cont-mensaje centro inv">
+    <div id="m1" class="mensaje tema-1 bo-1 inv">
+        <div class="cont-t-m centro">
+            <h3>¿Vaciar Datos?</h3>
+        </div>
+        <div class="cont-i-m">
+            <div class="cont-b-m centro">
+                <input type="submit" value="Cancelar" id="m1-cancelar" class="btn btn-outline-danger boton">
+            </div>
+            <div class="cont-b-m centro">
+                <input type="submit" value="Aceptar" id="m1-aceptar" class="btn btn-outline-success boton">
+            </div>
+        </div>
+    </div>
+    <div id="m2" class="mensaje tema-1 bo-1 inv">
+        <div class="cont-t-m centro">
+            <h3>Operación Completada</h3>
+        </div>
+        <div class="cont-i-m centro">
+            <input type="submit" value="Aceptar"  id="m2-aceptar" class="btn btn-outline-success boton">
+        </div>
+    </div>
+</div>
+
+<script src="../public/js/index.js"></script>
+<script src="../public/js/op.js"></script>
+<script src="../ctrl/folder.js"></script>
+<script src="player.js"></script>
+<script src="../public/js/on-load.js"></script>

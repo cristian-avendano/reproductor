@@ -1,0 +1,50 @@
+.general{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.lateral{
+    width: 70px;
+    height: 100%;
+}
+
+.contenido{
+    width: calc(100% - 70px);
+    height: 100%;
+}
+.scroll-y{
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+::-webkit-scrollbar {
+    background-color: #18191f;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #17202A;
+}
+
+
+.centro, .justi, .wraped{
+    display: flex;
+    flex-direction: row;
+}
+
+.centro{
+    justify-content: center;
+    align-items: center;
+}
+
+.justi{
+    justify-content: space-between;
+    align-items: center;
+}
+.wraped{
+    flex-wrap: wrap;
+}

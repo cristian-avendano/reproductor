@@ -1,0 +1,88 @@
+#play-cont{
+    width: 100%;
+    height: 100%;
+}
+.cover{
+    width: 100%;
+    height: 380px;
+}
+.cont-text-cover{
+    width: 100%;
+    height: 20%;
+}
+
+.cont-im-cover{
+    width: 100%;
+    height: 80%;
+}
+
+.slide-music{
+    width: 100%;
+    height: 20px;
+}
+
+.acciones{
+    width: 100%;
+    height: 100px;
+}
+
+.left, .right{
+    width: 25%;
+    height: 100%;
+}
+
+.center{
+    width: 50%;
+    height: 100%;
+}
+
+.caja-l{
+    width: 30%;
+    height: 100%;
+}
+
+.caja-c{
+    width: 40%;
+    height: 100%;
+}
+
+
+#stop, #izq, #der, #play{
+    border-radius: 100%;
+    transition: 0.5s;
+}
+
+#stop:hover, #izq:hover, #der:hover, #play:hover{
+    background-color:cadetblue;
+}
+
+#stop, #izq, #der {
+    width: 50px;
+    height: 50px;
+}
+
+#stop{
+    background: url('../iconos/stop-1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#izq{
+    background: url('../iconos/previous.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#play{
+    width: 70px;
+    height: 70px;
+    background: url('../iconos/play-button-1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#der{
+    background: url('../iconos/next.png');
+    background-size: cover;
+    background-position: center;
+}

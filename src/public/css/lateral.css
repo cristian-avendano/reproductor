@@ -1,0 +1,13 @@
+.opcion{
+    width: 70px;
+    height: 70px;
+}
+
+.icono{
+    width: 40px;
+    height: 40px;
+}
+
+#set-op{
+    margin-bottom: calc(500px - 210px);
+}

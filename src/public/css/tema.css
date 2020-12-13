@@ -1,0 +1,33 @@
+/*Fondos*/
+.tema-1{
+    background-color: #18191f;
+    color: white;
+}
+
+.tema-2{
+    background-color: whitesmoke;
+    color: black;
+}
+
+.tema-3{
+    background-color: #17202A;
+    color: white;
+}
+
+/*Bordes*/
+
+.bo-1{
+    border: solid 1px rebeccapurple;
+}
+
+.bo-s{
+    border: solid 1px greenyellow;
+}
+
+.bo-d{
+    border: solid 1px red;
+}
+
+.bo-w{
+    border: solid 1px orange;
+}

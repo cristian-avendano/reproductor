@@ -1,0 +1,48 @@
+.inv{
+    display: none;
+}
+
+.cont{
+    width: 100%;
+    height: 100%;
+}
+
+.fila{
+    width: 100%;
+    height: 70px;
+}
+
+.boton{
+    width: 100px;
+}
+
+.th-id{
+    width: 50px;
+    text-align: center;
+}
+.th-titulo{
+    width: calc(100% - 270px);
+}
+
+.th-duracion{
+    width: 100px;
+    text-align: center;
+}
+
+.th-rep{
+    width: 50px;
+    text-align: center;
+}
+.repro{
+    width: 50px;
+    height: 50px;
+    background: url('../iconos/play-button-1.png');
+    background-size: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+td{
+    height: 50px;
+}
+
