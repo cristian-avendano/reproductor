@@ -1,4 +1,9 @@
-# reproductor
+<style>
+  h1{
+  color:blue;
+  }
+</style>
+<h1>reproductor</h1>
 
 <img src="vista.png" height="500px">
 
