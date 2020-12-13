@@ -1,6 +1,6 @@
 # reproductor
 
-<img src="vista.png" width="300px" height="300px">
+<img src="vista.png" height="500px">
 
 #Welcome, this is a simple player that was build on electron technology, if you want to use it, 
 #you have to download the dependencies an then run the command 'npm start', that is especified in the package.json file.
