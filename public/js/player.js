@@ -1,21 +1,23 @@
 const how = require('howler');
 const ID3 = require('node-id3');
-const { getMusic } = require('../ctrl/folder');
 
-const list = listaDeMusica;
-var sound = [];
-let pos = 0;
-
-const tituloCover  =document.getElementById("titulo-cover"); 
+const tituloCover  =document.getElementById("titulo-cover");
+const time  =document.getElementById("time");  
 const izq  =document.getElementById("izq"); 
 const play  =document.getElementById("play"); 
 const stop  =document.getElementById("stop");
 const der  =document.getElementById("der"); 
 const vol  =document.getElementById("vol"); 
 
-if (list.length>0) {
-    sound = createSound();
-    setCover(list[0]);
+function iniciar() {
+    setListaMusica(list)
+    if (list.length>0) {
+        for (let i = 0; i < list.length; i++) {
+            list[i] = raiz.getFolder + "/" +list[i];
+        }
+        sound = createSound();
+        setCover(list[0]);
+    }
 }
 
 function createSound() {
@@ -40,16 +42,36 @@ function setCover(url) {
 }
 function changeIconPause() {
     console.log("work")
-    play.style.background = "url('../public/iconos/pause-1.png')";
+    play.style.background = "url('./public/iconos/pause-1.png')";
     play.style.backgroundSize = "cover";
     play.style.backgroundPosition = "center";
 }
 
 function changeIconPlay() {
     console.log("work")
-    play.style.background = "url('../public/iconos/play-button-1.png')";
+    play.style.background = "url('./public/iconos/play-button-1.png')";
     play.style.backgroundSize = "cover";
     play.style.backgroundPosition = "center";
+}
+
+function getTime() {
+    if (sound[pos].seek()<parseInt(sound[pos].duration(),10)) {
+
+        time.value = parseInt(sound[pos].seek(),10)
+        console.log(time.value)
+        var t = setTimeout(function(){ getTime() }, 1000);
+    }else{
+        console.log('finish');
+    }
+}
+
+function changePosRangeBar() {
+    sound[pos].on('play',()=>{
+        time.min=0;
+        time.max = parseInt(sound[pos].duration(),10);
+        time.value=0;
+        getTime()
+    })
 }
 
 
@@ -69,6 +91,7 @@ izq.addEventListener('click', ()=>{
         console.log("same")
     }
     changeIconPause();
+    changePosRangeBar();
 })
 
 
@@ -79,6 +102,7 @@ play.addEventListener('click', ()=>{
     }
     else{
         sound[pos].play();
+        changePosRangeBar();
         play.value = "Pause"
         console.log('work');
         changeIconPause();
@@ -88,6 +112,7 @@ play.addEventListener('click', ()=>{
 stop.addEventListener('click', ()=>{
     if (sound[pos].playing()) {
         sound[pos].stop();
+        time.value = 0;
         changeIconPlay();
     }
 })
@@ -107,10 +132,13 @@ der.addEventListener('click', ()=>{
         sound[pos].play();
     }
     changeIconPause();
+    changePosRangeBar();
 })
 
 vol.addEventListener ('input',()=>{
     how.Howler.volume(vol.value/10);
 })
+
+iniciar()
 
 
