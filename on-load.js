@@ -28,7 +28,7 @@ function setListaMusica(music) {
         cell1.innerHTML = i+1;
         cell2.innerHTML = music[i];
         cell3.innerHTML = "mp3";
-        cell4.classList.add("repro");
-        cell4.classList.add("repro-"+i);
+        cell4.classList.add("repro-2");
+        //cell4.classList.add("repro-"+i);
     }
 }

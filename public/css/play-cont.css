@@ -53,12 +53,13 @@
 }
 
 #stop:hover, #izq:hover, #der:hover, #play:hover{
-    background-color:cadetblue;
+    background-color:deeppink;
 }
 
 #stop, #izq, #der {
     width: 50px;
     height: 50px;
+    filter: invert();
 }
 
 #stop{
@@ -73,10 +74,19 @@
     background-position: center;
 }
 
-#play{
+.play{
     width: 70px;
     height: 70px;
+    filter: invert();
     background: url('../iconos/play-button-1.png');
+    background-size: cover;
+    background-position: center;
+}
+.pause{
+    width: 70px;
+    height: 70px;
+    filter: invert();
+    background: url('../iconos/pause-1.png');
     background-size: cover;
     background-position: center;
 }
