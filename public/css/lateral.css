@@ -11,3 +11,7 @@
 #set-op{
     margin-bottom: calc(500px - 210px);
 }
+
+.sele{
+    border-left: solid 2px deeppink;
+}
