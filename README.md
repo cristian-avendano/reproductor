@@ -1,5 +1,5 @@
 
-<h1>reproductor</h1>
+<h1>Electron Player</h1>
 
 <img src="vista.png" height="600px">
 
@@ -14,11 +14,10 @@ at moment, this player only use .mp3 files, in a future updates, it support more
 
 #if you have some cuestion about it, contact me at:
 
-#email: {
+#email:
 #  cristian-avendano@upc.edu.co,
-#  cristian_ave04@hotmail.com
-#}
+#  cristian-avendano@hotmail.com
 
-#phone(whatsapp):{
-#  +57 3123789557
-#}
+
+#phone(whatsapp) +57 3123789557
+
