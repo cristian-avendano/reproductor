@@ -58,6 +58,7 @@ function getTime() {
         var t = setTimeout(function(){ getTime() }, 1000);
     }else{
         console.log('finish');
+        changeIconPlay();
     }
 }
 
